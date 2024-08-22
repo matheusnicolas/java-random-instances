@@ -52,12 +52,9 @@ public class Publisher {
 
   @Override
   public String toString() {
-    return "Publisher{" +
-            "name='" + name + '\'' +
-            ", address=" + address +
-            ", foundedYear=" + foundedYear +
-            ", publishedBooks=" + publishedBooks +
-            '}';
+    return """
+            Publisher{name='%s', address='%s', foundedYear='%s', publishedBooks='%s'} 
+            """.formatted(name, address, foundedYear, publishedBooks);
   }
 
   @Override

@@ -53,12 +53,9 @@ public class Author {
 
   @Override
   public String toString() {
-    return "Author{" +
-            "firstName='" + firstName + '\'' +
-            ", lastName='" + lastName + '\'' +
-            ", birthdate=" + birthdate +
-            ", books=" + books +
-            '}';
+    return """
+            Author{firstName='%s', lastName='%s', birthdate='%s', books='%s'}
+            """.formatted(firstName, lastName, birthdate, books);
   }
 
   @Override

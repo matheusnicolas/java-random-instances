@@ -90,26 +90,9 @@ public class Book {
 
   @Override
   public String toString() {
-    return "Book -> {"
-        + "title='"
-        + title
-        + '\''
-        + ", isbn='"
-        + isbn
-        + '\''
-        + ", author="
-        + author.getFirstName()
-        + " "
-        + author.getLastName()
-        + ", publisher="
-        + publisher.getName()
-        + ", price="
-        + price
-        + ", publishedDate="
-        + publishedDate
-        + ", genres="
-        + genres
-        + " }";
+    return """
+            Book{title='%s', isbn='%s', author='%s %s', publisher='%s', price='%s', publisherDate='%s', genres='%s'
+            """.formatted(title, isbn, author.getFirstName(), author.getLastName(), publisher.getName(), price, publishedDate, genres);
   }
 
   @Override
