@@ -1,5 +1,13 @@
 package org.example;
 
+import org.example.models.Address;
+import org.example.models.Author;
+import org.example.models.Book;
+import org.example.models.Publisher;
+
+import java.time.LocalDate;
+import java.util.List;
+
 // TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -15,5 +23,28 @@ public class Main {
       // actionId="ToggleLineBreakpoint"/>.
       System.out.println("i = " + i);
     }
+    var author = new Author("Isaac", "Asimov", LocalDate.of(1920, 1, 2), null);
+    var publisher = new Publisher("Editora XYZ", null, 1950, null);
+    var book = new Book(
+            "Eu, Robô",
+            "978-0-553-29364-7",
+            author,
+            publisher,
+            29.90,
+            LocalDate.of(1950, 1, 1),
+            List.of("Ficção Científica")
+    );
+    var address = new Address(
+            "123 Rua Principal",
+            "São Paulo",
+            "SP",
+            "01234-567",
+            "Brasil"
+    );
+
+    System.out.println(author);
+    System.out.println(publisher);
+    System.out.println(book);
+    System.out.println(address);
   }
 }
