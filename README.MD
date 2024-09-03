@@ -97,7 +97,7 @@ import static com.example.TestUtils.randomInstance;
 public class ExampleTest {
 
     @Test
-    void testWithRandomBook() {
+    void shoudGenerateRandomBook() {
         Book randomBook = randomInstance(Book.class);
         assertNotNull(randomBook);
         // Further assertions and tests
